@@ -1,0 +1,148 @@
+$light: 300;
+$regular: 400;
+$bold: 600;
+$default: 285px;
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --cyan-alpha: hsla(178, 100%, 50%, 0.6);
+  --dark-blue-main: hsl(217, 54%, 11%);
+  --dark-blue-card: hsl(216, 50%, 16%);
+  --dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  font: {
+    size: 18px;
+    family: 'Outfit';
+    weight: $regular;
+  }
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  main {
+    height: inherit;
+  }
+  footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: var(--soft-blue);
+  }
+}
+
+.outer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue-main);
+}
+
+.card {
+  width: $default;
+  margin: 1.25rem;
+  padding: 1.25rem;
+  background-color: var(--dark-blue-card);
+  color: var(--soft-blue);
+  border-radius: 1rem;
+  div:nth-child(n) {
+    margin-bottom: 1.25rem;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  #nft-img-box {
+    &::before {
+      content: "";
+      background: {
+        color: var(--cyan-alpha);
+        image: url('../images/icon-view.svg');
+        repeat: no-repeat;
+        position: center;
+      }
+      border-radius: 0.5rem;
+      opacity: 0;
+      transition: opacity 200ms;
+      width: $default;
+      height: $default;
+      position: absolute;
+    }
+    &:hover::before {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+  .title {
+    color: var(--white);
+    font-size: 1.35rem;
+    margin-top: 1.25rem;
+  }
+  .content {
+    color: var(--soft-blue);
+    font-weight: $light;
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    height: 1rem;
+    img {
+      width: auto;
+      height: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+  .coin {
+    height: inherit;
+    color: var(--cyan);
+    display: flex;
+    align-items: center;
+    #ether {
+      font-weight: $bold;
+    }
+  }
+  .days {
+    color: var(--soft-blue);
+    font-weight: $light;
+    display: flex;
+    align-items: center;
+    #clock {
+      font-weight: $regular;
+    }
+  }
+  hr {
+    border-color: var(--dark-blue-line);
+    margin-top: -.25rem;
+    margin-bottom: 1rem;
+  }
+  #avatar {
+    width: 2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--white);
+    margin-right: 1rem;
+  }
+  .avatar {
+    display: flex;
+    align-items: center;
+  }
+  #names {
+    color: var(--white);
+    &:hover {
+      color: var(--cyan);
+      cursor: pointer;
+    }
+  }
+}
+
+img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.attribution {
+  font-size: .75rem;
+  text-align: center;
+  a {
+    color: var(--cyan-alpha);
+  }
+}

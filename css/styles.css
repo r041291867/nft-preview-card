@@ -1,0 +1,182 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --cyan-alpha: hsla(178, 100%, 50%, 0.6);
+  --dark-blue-main: hsl(217, 54%, 11%);
+  --dark-blue-card: hsl(216, 50%, 16%);
+  --dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  font-size: 18px;
+  font-family: 'Outfit';
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+body main {
+  height: inherit;
+}
+
+body footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: var(--soft-blue);
+}
+
+.outer {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--dark-blue-main);
+}
+
+.card {
+  width: 285px;
+  margin: 1.25rem;
+  padding: 1.25rem;
+  background-color: var(--dark-blue-card);
+  color: var(--soft-blue);
+  border-radius: 1rem;
+}
+
+.card div:nth-child(n) {
+  margin-bottom: 1.25rem;
+}
+
+.card div:nth-child(n):last-child {
+  margin: 0;
+}
+
+.card #nft-img-box::before {
+  content: "";
+  background-color: var(--cyan-alpha);
+  background-image: url("../images/icon-view.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.5rem;
+  opacity: 0;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+  width: 285px;
+  height: 285px;
+  position: absolute;
+}
+
+.card #nft-img-box:hover::before {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card .title {
+  color: var(--white);
+  font-size: 1.35rem;
+  margin-top: 1.25rem;
+}
+
+.card .content {
+  color: var(--soft-blue);
+  font-weight: 300;
+}
+
+.card .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 1rem;
+}
+
+.card .info img {
+  width: auto;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.card .coin {
+  height: inherit;
+  color: var(--cyan);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .coin #ether {
+  font-weight: 600;
+}
+
+.card .days {
+  color: var(--soft-blue);
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .days #clock {
+  font-weight: 400;
+}
+
+.card hr {
+  border-color: var(--dark-blue-line);
+  margin-top: -.25rem;
+  margin-bottom: 1rem;
+}
+
+.card #avatar {
+  width: 2rem;
+  border-radius: 2rem;
+  border: 1px solid var(--white);
+  margin-right: 1rem;
+}
+
+.card .avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card #names {
+  color: var(--white);
+}
+
+.card #names:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.attribution {
+  font-size: .75rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--cyan-alpha);
+}
+/*# sourceMappingURL=styles.css.map */
