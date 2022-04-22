@@ -157,11 +157,11 @@ body footer {
           align-items: center;
 }
 
-.card #names {
+.card .name {
   color: var(--white);
 }
 
-.card #names:hover {
+.card .name:hover {
   color: var(--cyan);
   cursor: pointer;
 }
